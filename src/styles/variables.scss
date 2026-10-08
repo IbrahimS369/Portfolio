@@ -1,0 +1,94 @@
+// ---------------------------------------------------------------
+// Design tokens — Luxurious Egyptian Blue Dark Mode
+// ---------------------------------------------------------------
+
+// Primary Egyptian Blue Brand Palette
+$blue: #184bff;             // Vibrant, luminous Egyptian Blue
+$blue-bright: #3872ff;      // High-energy Egyptian Blue highlight
+$blue-glow: #6195ff;        // Soft cerulean / ice glow
+$blue-deep: #0d32b8;        // Deep imperial Egyptian Blue
+$blue-ink: #0b2796;         // Pressed state
+$blue-soft: rgba(24, 75, 255, 0.14);
+$blue-sheen: rgba(56, 114, 255, 0.24);
+
+// Backgrounds: Deep Royal Navy & Egyptian Blue Infused Tones
+$navy-bg: #040817;          // Deepest space navy
+$navy-surface: #07132b;     // Card & module surface (distinctly blue-tinted)
+$navy-surface-2: #0b1c3e;   // Browser chrome, hovered cards, elevated panels
+$navy-surface-3: #102652;   // High elevation, badges, active tabs
+$navy-border: rgba(45, 105, 255, 0.18);
+$navy-border-glow: rgba(56, 125, 255, 0.45);
+
+// Aliases for compatibility
+$paper: $navy-bg;
+$paper-2: $navy-surface;
+$ink: #ffffff;
+$ink-2: #f0f5ff;
+$white: #ffffff;
+
+// Typography Colors
+$text-title: #ffffff;
+$text-ice: #f0f5ff;
+$text-light: #d3e1fa;
+$text-muted: #8ba7dc;       // Legible periwinkle/slate on dark navy
+$text-dim: #5d78af;
+
+$gray-700: $text-light;
+$gray-600: $text-muted;
+$gray-500: $text-dim;
+$gray-300: rgba(56, 125, 255, 0.35);
+
+// Borders & Dividers
+$line: rgba(45, 105, 255, 0.18);
+$line-strong: rgba(56, 125, 255, 0.36);
+$line-bright: rgba(70, 145, 255, 0.65);
+
+// Type Families
+$font-display: 'Inter Tight', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+$font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+$font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+
+// Layout
+$container: 1320px;
+$gutter: clamp(20px, 4vw, 48px);
+$radius-sm: 6px;
+$radius: 10px;
+$radius-lg: 14px;
+$nav-h: 72px;
+
+// Motion
+$ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+$ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+// Breakpoints
+$bp-xl: 1440px;
+$bp-lg: 1200px;
+$bp-md: 992px;
+$bp-sm: 768px;
+$bp-xs: 480px;
+$bp-xxs: 375px;
+
+@mixin below($bp) {
+  @media (max-width: ($bp - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin above($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin focus-ring($color: $blue-bright) {
+  outline: 2px solid $color;
+  outline-offset: 3px;
+}

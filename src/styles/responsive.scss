@@ -1,0 +1,406 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+/* =================================================================
+   Responsive Rules
+   Breakpoints: 1440px+, 1200px, 992px, 768px, 480px, 375px
+   ================================================================= */
+
+// -----------------------------------------------------------------
+// Large Desktop (<= 1440px)
+// -----------------------------------------------------------------
+@include below($bp-xl) {
+  .hero__title {
+    font-size: clamp(3rem, 7.8vw, 7.5rem);
+  }
+
+  .section-title--xl {
+    font-size: clamp(3rem, 8vw, 7.5rem);
+  }
+
+  .contact__title {
+    font-size: clamp(3rem, 8vw, 7.5rem);
+  }
+}
+
+// -----------------------------------------------------------------
+// Desktop / Laptop (<= 1200px)
+// -----------------------------------------------------------------
+@include below($bp-lg) {
+  .hero__lead {
+    max-width: 30rem;
+  }
+
+  .services__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    li {
+      padding: 24px 20px 28px 0;
+
+      &:nth-child(2) {
+        border-right: 0;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        border-top: 1px solid $line;
+      }
+
+      &:nth-child(3) {
+        padding-left: 0;
+      }
+
+      &:nth-child(2n) {
+        padding-left: 24px;
+      }
+    }
+  }
+
+  .github__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+// -----------------------------------------------------------------
+// Tablets (<= 992px)
+// -----------------------------------------------------------------
+@include below($bp-md) {
+  .nav {
+    &__links {
+      display: none;
+    }
+
+    &__cta {
+      display: none;
+    }
+
+    &__toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // Hero: Three.js canvas recedes behind centered content
+  .hero {
+    min-height: auto;
+    padding-top: $nav-h + 40px;
+    padding-bottom: 48px;
+
+    &__veil {
+      background: linear-gradient(
+        180deg,
+        rgba(4, 8, 23, 0.94) 0%,
+        rgba(4, 8, 23, 0.85) 50%,
+        rgba(4, 8, 23, 0.96) 100%
+      );
+    }
+
+    &__meta {
+      flex-wrap: wrap;
+      gap: 16px 32px;
+      margin-top: 48px;
+    }
+
+    &__scroll {
+      display: none;
+    }
+  }
+
+  // About: single column stack
+  .about {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    &__head {
+      position: static;
+    }
+  }
+
+  // Skills: 2-column layout for groups
+  .skills {
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .skill-group {
+    grid-column: span 1;
+
+    &--primary {
+      grid-column: span 2;
+    }
+
+    &--learning {
+      grid-column: span 2;
+    }
+  }
+
+  // Projects: stack into single column
+  .work {
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 56px;
+    }
+  }
+
+  .project {
+    &--wide {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    &--reverse .project__media {
+      order: 0;
+    }
+  }
+
+  // Learning Journey: stack
+  .journey {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    &__head {
+      position: static;
+    }
+  }
+
+  // Footer: 1 column
+  .footer {
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    &__links {
+      gap: 12px 20px;
+    }
+  }
+}
+
+// -----------------------------------------------------------------
+// Mobile Landscape / Small Tablets (<= 768px)
+// -----------------------------------------------------------------
+@include below($bp-sm) {
+  .section {
+    padding-block: clamp(60px, 10vw, 96px);
+  }
+
+  .section-head {
+    margin-bottom: 36px;
+
+    &--split {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+
+  .hero {
+    &__title {
+      font-size: clamp(2.5rem, 11vw, 4.2rem);
+      letter-spacing: -0.04em;
+    }
+
+    &__actions {
+      flex-direction: column;
+      align-items: stretch;
+
+      .btn {
+        width: 100%;
+      }
+
+      .link-arrow {
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .about {
+    &__edu {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .skills {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .skill-group {
+    grid-column: span 1 !important;
+    padding: 20px;
+  }
+
+  .github__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services__list {
+    grid-template-columns: 1fr;
+    border-top: 1px solid $ink;
+
+    li {
+      padding: 20px 0 !important;
+      border-right: 0 !important;
+      border-bottom: 1px solid $line;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      h3 {
+        margin: 16px 0 8px;
+      }
+    }
+  }
+
+  .timeline {
+    &::before {
+      left: 20px;
+    }
+
+    &__item {
+      grid-template-columns: 1fr;
+      padding-left: 36px;
+      padding-bottom: 36px;
+
+      &::before {
+        left: 15px;
+        top: 4px;
+      }
+    }
+
+    &__when {
+      margin-bottom: 6px;
+    }
+
+    &__body {
+      padding-left: 0;
+    }
+  }
+
+  .contact {
+    &__title {
+      font-size: clamp(2.5rem, 11vw, 4.5rem);
+    }
+
+    &__actions {
+      flex-direction: column;
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    &__elsewhere {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+}
+
+// -----------------------------------------------------------------
+// Mobile Small (<= 480px)
+// -----------------------------------------------------------------
+@include below($bp-xs) {
+  :root {
+    --gutter: 16px;
+  }
+
+  .container {
+    padding-inline: 16px;
+  }
+
+  .hero {
+    &__title {
+      font-size: clamp(2.15rem, 11vw, 3rem);
+    }
+
+    &__eyebrow {
+      font-size: 0.75rem;
+      padding: 5px 10px;
+    }
+
+    &__lead {
+      font-size: 1rem;
+    }
+  }
+
+  .project {
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__actions {
+      flex-direction: column;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .browser {
+    &__bar {
+      height: 38px;
+      padding: 0 8px 0 10px;
+      gap: 8px;
+    }
+
+    &__url {
+      font-size: 0.625rem;
+    }
+
+    &__preview {
+      height: 24px;
+      padding: 0 8px;
+      font-size: 0.6875rem;
+    }
+  }
+
+  .chip {
+    padding: 6px 10px;
+    font-size: 0.8125rem;
+  }
+
+  .chips--sm .chip {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .btn--lg {
+    min-height: 48px;
+    font-size: 0.9375rem;
+  }
+}
+
+// -----------------------------------------------------------------
+// Mobile Extra-Small (<= 375px)
+// -----------------------------------------------------------------
+@include below($bp-xxs) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .contact__title {
+    font-size: 2.2rem;
+  }
+
+  .mobile-menu a {
+    font-size: 1.75rem;
+  }
+}
+

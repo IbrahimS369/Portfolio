@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibrahim Saleh — Frontend Developer | Angular &amp; ASP.NET Core</title>
+    <meta
+      name="description"
+      content="Portfolio of Ibrahim Saleh, a frontend developer focused on Angular, modern web development, APIs, and ASP.NET Core."
+    />
+    <meta name="author" content="Ibrahim Saleh" />
+    <meta name="theme-color" content="#040817" />
+    <meta name="color-scheme" content="dark" />
+    <!-- TODO: replace with the final production URL once deployed -->
+    <link rel="canonical" href="https://YOUR-DOMAIN.example/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ibrahim Saleh — Frontend Developer | Angular & ASP.NET Core" />
+    <meta
+      property="og:description"
+      content="Portfolio of Ibrahim Saleh, a frontend developer focused on Angular, modern web development, APIs, and ASP.NET Core."
+    />
+    <meta property="og:url" content="https://YOUR-DOMAIN.example/" />
+    <meta property="og:site_name" content="Ibrahim Saleh" />
+    <meta property="og:locale" content="en_US" />
+    <!-- TODO: add an og:image (1200×630) once a share image exists -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Ibrahim Saleh — Frontend Developer | Angular & ASP.NET Core" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Ibrahim Saleh, a frontend developer focused on Angular, modern web development, APIs, and ASP.NET Core."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.github.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ibrahim Saleh",
+        "jobTitle": "Frontend Developer",
+        "url": "https://YOUR-DOMAIN.example/",
+        "sameAs": ["https://github.com/IbrahimS369"],
+        "knowsAbout": ["Angular", "TypeScript", "ASP.NET Core", "C#", "REST APIs"],
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Mansoura University" }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Custom cursor (desktop, fine pointer only — enabled from JS) -->
+    <div class="cursor" aria-hidden="true">
+      <span class="cursor__dot"></span>
+      <span class="cursor__ring"></span>
+    </div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <header class="nav" id="nav">
+      <div class="nav__inner container">
+        <a class="nav__logo" href="#home" aria-label="Ibrahim Saleh — back to top">
+          <span class="nav__mark" aria-hidden="true">IS</span>
+          <span class="nav__name">Ibrahim Saleh</span>
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <ul>
+            <li><a href="#home" data-nav="home">Home</a></li>
+            <li><a href="#about" data-nav="about">About</a></li>
+            <li><a href="#skills" data-nav="skills">Skills</a></li>
+            <li><a href="#projects" data-nav="projects">Projects</a></li>
+            <li><a href="#journey" data-nav="journey">Journey</a></li>
+            <li><a href="#contact" data-nav="contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a class="nav__cta" href="#contact">Let's Talk</a>
+
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav aria-label="Mobile">
+          <ol>
+            <li><a href="#home" data-nav="home"><small>00</small>Home</a></li>
+            <li><a href="#about" data-nav="about"><small>01</small>About</a></li>
+            <li><a href="#skills" data-nav="skills"><small>02</small>Skills</a></li>
+            <li><a href="#projects" data-nav="projects"><small>03</small>Projects</a></li>
+            <li><a href="#journey" data-nav="journey"><small>04</small>Journey</a></li>
+            <li><a href="#contact" data-nav="contact"><small>05</small>Contact</a></li>
+          </ol>
+        </nav>
+        <p class="mobile-menu__foot">
+          <a href="https://github.com/IbrahimS369" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </p>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero__canvas" aria-hidden="true"></div>
+        <div class="hero__veil" aria-hidden="true"></div>
+
+        <div class="hero__content container">
+          <p class="hero__eyebrow reveal-line">
+            <span class="dot" aria-hidden="true"></span>
+            Frontend Developer — Angular · ASP.NET Core
+          </p>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="line"><span style="--i: 0">I build modern</span></span>
+            <span class="line"><span style="--i: 1">digital experiences<em>.</em></span></span>
+          </h1>
+
+          <p class="hero__lead reveal-line" style="--i: 2">
+            Frontend developer focused on Angular, modern web interfaces, and ASP.NET Core — building toward
+            full-stack .NET development.
+          </p>
+
+          <div class="hero__actions reveal-line" style="--i: 3">
+            <a class="btn btn--primary btn--lg" href="#projects">
+              View My Work <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#contact">Let's Talk</a>
+            <a
+              class="link-arrow"
+              href="https://github.com/IbrahimS369"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile (opens in a new tab)"
+              >GitHub <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+
+        <div class="hero__meta container reveal-line" style="--i: 4">
+          <p><span class="mono">Now</span> DEPI Scholarship — .NET track</p>
+          <p><span class="mono">Work</span> 7 featured projects below</p>
+          <a class="hero__scroll" href="#about" aria-label="Scroll to About section">
+            <span class="mono">Scroll</span><span class="hero__scroll-line" aria-hidden="true"></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="container about__grid">
+          <div class="about__head" data-reveal>
+            <p class="section-label"><span>01</span> About</p>
+            <h2 class="section-title" id="about-title">
+              Frontend is where I started. <span class="muted">Full-stack .NET is where I'm heading.</span>
+            </h2>
+          </div>
+
+          <div class="about__body">
+            <div class="about__copy" data-reveal>
+              <p class="lead">
+                I build modern, responsive frontend interfaces — mostly with <strong>Angular</strong> and
+                <strong>TypeScript</strong> — and connect them to real data through REST APIs.
+              </p>
+              <p>
+                I care about the details people actually feel: clean layouts, sensible interactions, accessible
+                markup, and pages that load fast. Right now I'm extending that foundation to the server side with
+                <strong>C#</strong> and <strong>ASP.NET Core</strong>, so I can own features end to end.
+              </p>
+            </div>
+
+            <ul class="about__pillars" data-reveal>
+              <li><span class="mono">01</span>Modern frontend interfaces</li>
+              <li><span class="mono">02</span>Angular &amp; TypeScript</li>
+              <li><span class="mono">03</span>API integration</li>
+              <li><span class="mono">04</span>UI quality &amp; performance</li>
+              <li><span class="mono">05</span>Expanding into C# &amp; ASP.NET Core</li>
+            </ul>
+
+            <div class="about__edu" data-reveal>
+              <div class="edu-block">
+                <h3 class="edu-block__label mono">Education</h3>
+                <p class="edu-block__title">B.Sc. Computer &amp; Information Sciences</p>
+                <p class="edu-block__sub">Mansoura University — IT Department · 2023</p>
+              </div>
+              <div class="edu-block">
+                <h3 class="edu-block__label mono">Training programs</h3>
+                <ul class="edu-block__list">
+                  <li><strong>ITI</strong><span>Software development training</span></li>
+                  <li><strong>Route Academy</strong><span>Frontend development training</span></li>
+                  <li><strong>DEPI Scholarship</strong><span>.NET-focused training · current</span></li>
+                </ul>
+                <p class="edu-block__note">Education and training — not employment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section class="section skills" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="section-label"><span>02</span> Skills</p>
+            <h2 class="section-title" id="skills-title">Tools I use to ship interfaces — and the ones I'm adding next.</h2>
+          </header>
+
+          <div class="skills__grid">
+            <article class="skill-group skill-group--primary" data-reveal>
+              <h3><span class="mono">A</span> Frontend</h3>
+              <ul class="chips">
+                <li class="chip chip--strong">Angular</li>
+                <li class="chip chip--strong">TypeScript</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">HTML5</li>
+                <li class="chip">CSS3</li>
+                <li class="chip">SCSS</li>
+                <li class="chip">Tailwind CSS</li>
+                <li class="chip">Bootstrap</li>
+              </ul>
+            </article>
+
+            <article class="skill-group" data-reveal>
+              <h3><span class="mono">B</span> Backend &amp; Core</h3>
+              <ul class="chips">
+                <li class="chip chip--strong">C#</li>
+                <li class="chip">C++</li>
+                <li class="chip">ASP.NET Core</li>
+                <li class="chip">Web API</li>
+                <li class="chip">MVC</li>
+                <li class="chip">REST APIs</li>
+              </ul>
+            </article>
+
+            <article class="skill-group" data-reveal>
+              <h3><span class="mono">C</span> Database</h3>
+              <ul class="chips">
+                <li class="chip">SQL</li>
+                <li class="chip">SQL Server</li>
+                <li class="chip">MySQL</li>
+              </ul>
+            </article>
+
+            <article class="skill-group" data-reveal>
+              <h3><span class="mono">D</span> Tools &amp; Platforms</h3>
+              <ul class="chips">
+                <li class="chip">Git</li>
+                <li class="chip">GitHub</li>
+                <li class="chip">Docker</li>
+                <li class="chip">Shopify</li>
+                <li class="chip">Salla</li>
+                <li class="chip">OpenCart</li>
+                <li class="chip">WordPress</li>
+              </ul>
+            </article>
+
+            <article class="skill-group skill-group--learning" data-reveal>
+              <h3><span class="pulse" aria-hidden="true"></span> Currently learning</h3>
+              <ul class="chips">
+                <li class="chip chip--dashed">Entity Framework Core</li>
+                <li class="chip chip--dashed">LINQ</li>
+                <li class="chip chip--dashed">Clean Architecture</li>
+                <li class="chip chip--dashed">SOLID</li>
+                <li class="chip chip--dashed">Dependency Injection</li>
+                <li class="chip chip--dashed">JWT / Authentication</li>
+                <li class="chip chip--dashed">AI Integration</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="section work" id="projects" aria-labelledby="work-title">
+        <div class="container">
+          <header class="section-head section-head--split" data-reveal>
+            <div>
+              <p class="section-label"><span>03</span> Projects</p>
+              <h2 class="section-title section-title--xl" id="work-title">Selected Work</h2>
+            </div>
+            <p class="section-sub">Real projects, real interfaces, and things I've actually built.</p>
+          </header>
+
+          <div class="work__list" id="projects-list">
+            <noscript>
+              <p>Enable JavaScript to see the project showcase, or visit
+                <a href="https://github.com/IbrahimS369">github.com/IbrahimS369</a>.</p>
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MORE FROM GITHUB ============ -->
+      <section class="section github" id="github" aria-labelledby="github-title">
+        <div class="container">
+          <header class="section-head section-head--split" data-reveal>
+            <div>
+              <p class="section-label"><span>3.1</span> Open source</p>
+              <h2 class="section-title" id="github-title">More from GitHub</h2>
+            </div>
+            <a class="link-arrow" href="https://github.com/IbrahimS369?tab=repositories" target="_blank" rel="noopener noreferrer"
+              >All repositories <span aria-hidden="true">↗</span></a
+            >
+          </header>
+          <div class="github__grid" id="github-repos" aria-live="polite" aria-busy="true"></div>
+        </div>
+      </section>
+
+      <!-- ============ SERVICES ============ -->
+      <section class="section services" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="section-label"><span>04</span> Services</p>
+            <h2 class="section-title" id="services-title">What I can help with.</h2>
+          </header>
+          <ol class="services__list">
+            <li data-reveal>
+              <span class="mono">01</span>
+              <h3>Frontend Development</h3>
+              <p>Responsive and modern web interfaces.</p>
+            </li>
+            <li data-reveal>
+              <span class="mono">02</span>
+              <h3>WordPress Development</h3>
+              <p>Business websites and customization.</p>
+            </li>
+            <li data-reveal>
+              <span class="mono">03</span>
+              <h3>API Integration</h3>
+              <p>Connecting frontend applications with REST APIs.</p>
+            </li>
+            <li data-reveal>
+              <span class="mono">04</span>
+              <h3>E-commerce Customization</h3>
+              <p>Improving storefront interfaces and user experience.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ JOURNEY ============ -->
+      <section class="section journey" id="journey" aria-labelledby="journey-title">
+        <div class="container journey__grid">
+          <header class="journey__head" data-reveal>
+            <p class="section-label"><span>05</span> Journey</p>
+            <h2 class="section-title" id="journey-title">Learning Journey</h2>
+            <p class="section-sub">From a CS degree to frontend craft — and now the full .NET stack.</p>
+          </header>
+
+          <ol class="timeline">
+            <li class="timeline__item" data-reveal>
+              <p class="timeline__when mono">2023</p>
+              <div class="timeline__body">
+                <h3>B.Sc. Computer &amp; Information Sciences</h3>
+                <p>Mansoura University — IT Department</p>
+                <span class="tag">Education</span>
+              </div>
+            </li>
+            <li class="timeline__item" data-reveal>
+              <p class="timeline__when mono">ITI</p>
+              <div class="timeline__body">
+                <h3>Information Technology Institute</h3>
+                <p>Software development training.</p>
+                <span class="tag">Training</span>
+              </div>
+            </li>
+            <li class="timeline__item" data-reveal>
+              <p class="timeline__when mono">Route</p>
+              <div class="timeline__body">
+                <h3>Route Academy</h3>
+                <p>Frontend development training.</p>
+                <span class="tag">Training</span>
+              </div>
+            </li>
+            <li class="timeline__item timeline__item--current" data-reveal>
+              <p class="timeline__when mono">Now</p>
+              <div class="timeline__body">
+                <h3>DEPI Scholarship</h3>
+                <p>Current .NET-focused training.</p>
+                <ul class="chips chips--sm" aria-label="DEPI Scholarship topics">
+                  <li class="chip">C#</li>
+                  <li class="chip">SQL Server</li>
+                  <li class="chip">Git/GitHub</li>
+                  <li class="chip">ASP.NET Core Web API</li>
+                  <li class="chip">ASP.NET Core MVC</li>
+                  <li class="chip">Docker</li>
+                  <li class="chip">Unit Testing</li>
+                  <li class="chip">Functional Documentation</li>
+                  <li class="chip">Prompt Engineering</li>
+                </ul>
+                <span class="tag tag--accent">In progress</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container contact__inner">
+          <p class="section-label section-label--light" data-reveal><span>06</span> Contact</p>
+          <h2 class="contact__title" id="contact-title" data-reveal>
+            Let's build something <em>meaningful.</em>
+          </h2>
+          <p class="contact__sub" data-reveal>Have an idea, a product, or a problem worth solving? Let's talk.</p>
+          <div class="contact__actions" id="contact-actions" data-reveal></div>
+          <p class="contact__elsewhere" id="contact-elsewhere" data-reveal></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <p class="footer__name">Ibrahim Saleh</p>
+          <p class="footer__role">Frontend Developer · Angular · ASP.NET Core</p>
+        </div>
+        <ul class="footer__links" id="footer-links" aria-label="Profiles"></ul>
+        <p class="footer__copy">© 2026 Ibrahim Saleh. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+
